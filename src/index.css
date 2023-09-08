@@ -51,3 +51,13 @@
 .h-text span{
   text-orientation: mixed;
 }
+
+
+
+.app {
+  scroll-snap-type:y mandatory;
+  scroll-snap-stop: start;
+}
+.app section{
+  scroll-snap-align: start;
+}
