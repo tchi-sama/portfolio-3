@@ -24,6 +24,7 @@ export default function Work() {
             infinite={true}
             keyBoardControl={true}
             removeArrowOnDeviceType={[]}
+            arrows
           >
             <Project/>
             <Project/>

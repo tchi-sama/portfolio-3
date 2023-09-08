@@ -23,7 +23,7 @@ export default function About() {
             aors == 0 ?
             <div className="px-3">
                 <h1 className="text-4xl md:text-8xl  mb-4 md:mb-8 font-bold">Salutations!</h1>
-                <p className=" md:text-3xl text-md max-w-7xl">
+                <p className=" md:text-3xl  leading-[40px] text-md max-w-7xl">
                 I'm Abdessamad, also known as Tchisama. I'm a JavaScript Developer and
                 Designer from Morocco. With a passion for blending technical expertise
                 and aesthetics, I create captivating web experiences. Let's

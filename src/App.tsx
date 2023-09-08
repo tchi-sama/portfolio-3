@@ -22,7 +22,7 @@ import Links from "../components/Links"
     return (
         //{/* <div className="fixed -z-30 bg-red-200 w-screen left-0 top-0 h-screen "> */}
         <div onScroll={handleScroll} ref={divRef} className="app h-screen bg-custom overflow-y-scroll">
-          <Navbar section={currentSection}/>
+          <Navbar/>
           <Links section={currentSection}/>
           <Home/>
           <About/>
