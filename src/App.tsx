@@ -1,7 +1,9 @@
 import Home from "../sections/home"
+import Work from "../sections/Work"
 import Navbar from "../components/Navbar"
 import About from "../sections/About"
 import {useRef,useState} from "react"
+import Links from "../components/Links"
     
   function App() {
     const divRef = useRef<HTMLDivElement>(null)
@@ -18,21 +20,14 @@ import {useRef,useState} from "react"
     };
     
     return (
-      <div className="relative">
-        <div className="fixed bg-custom w-screen left-0 top-0 z-1 h-screen "></div>
-        <svg  viewBox="0 0 200 200" className="hidden">
-          <filter id="noiseFilter">
-            <feTurbulence type="fractalNoise" baseFrequency="0.84" numOctaves={"6"} stitchTiles={"stitch"}></feTurbulence>
-          </filter>
-        </svg>
-        <Navbar section={currentSection}/>
-        <div onScroll={handleScroll} ref={divRef} className="app h-screen overflow-y-scroll">
+        //{/* <div className="fixed -z-30 bg-red-200 w-screen left-0 top-0 h-screen "> */}
+        <div onScroll={handleScroll} ref={divRef} className="app h-screen bg-custom overflow-y-scroll">
+          <Navbar section={currentSection}/>
+          <Links section={currentSection}/>
           <Home/>
           <About/>
-          <About/>
-          <About/>
+          <Work/>
         </div>
-      </div>
     )
   }
 

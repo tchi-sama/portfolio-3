@@ -7,7 +7,6 @@ export default function Navbar({section}:{section:number}) {
             <div className="flex-1">
                 <h1 className="text-2xl md:text-4xl font-bold opacity-80 ">(◕ᗜ◕)</h1>
             </div>
-            <Links section={section}/>
             <div className="flex-1 flex justify-end">
                 <h1 className="text-2xl font-bold  opacity-80 flex">Github<FiArrowUpRight size={35}/></h1>
             </div>

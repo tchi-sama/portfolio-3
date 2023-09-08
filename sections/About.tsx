@@ -30,8 +30,8 @@ export default function About() {
                 collaborate and build something extraordinary!
                 </p>
             </div>:
-            <>
-                <h1 className="text-4xl md:text-8xl  font-bold">Skills</h1>
+            <div>
+                <h1 className="text-4xl md:text-8xl mb-8 font-bold">Skills</h1>
                 <div className="grid md:grid-cols-4 gap-3 grid-cols-2">
                   <div>
                     <h3 className="text-xl md:text-3xl mb-2 md:mb-8">Frontend</h3>
@@ -85,7 +85,7 @@ export default function About() {
 
 
                 </div>
-            </>
+            </div>
         }
       </div>
     </section>
