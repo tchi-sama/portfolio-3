@@ -5,7 +5,7 @@ export default function Navbar({section}:{section:number}) {
     <div className="p-8  flex justify-between fixed w-full z-50 left-0 top-0">
         <div className="flex justify-between container mx-auto">
             <div className="flex-1">
-                <h1 className="text-4xl font-bold opacity-80 ">(◕ᗜ◕)</h1>
+                <h1 className="text-2xl md:text-4xl font-bold opacity-80 ">(◕ᗜ◕)</h1>
             </div>
             <Links section={section}/>
             <div className="flex-1 flex justify-end">
