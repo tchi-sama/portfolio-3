@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar"
 import About from "../sections/About"
 import {useRef,useState} from "react"
 import Links from "../components/Links"
+
+import Project from "../pages/Project"
     
   function App() {
     const divRef = useRef<HTMLDivElement>(null)
@@ -21,13 +23,18 @@ import Links from "../components/Links"
     
     return (
         //{/* <div className="fixed -z-30 bg-red-200 w-screen left-0 top-0 h-screen "> */}
-        <div onScroll={handleScroll} ref={divRef} className="app h-screen bg-custom overflow-y-scroll">
-          <Navbar/>
-          <Links section={currentSection}/>
-          <Home/>
-          <About/>
-          <Work/>
-        </div>
+          1?
+          <div>
+            <Project/>
+          </div>
+          :
+          <div onScroll={handleScroll} ref={divRef} className="app h-screen bg-custom overflow-y-scroll">
+            <Navbar/>
+            <Links section={currentSection}/>
+            <Home/>
+            <About/>
+            <Work/>
+          </div>
     )
   }
 

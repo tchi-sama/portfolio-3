@@ -46,9 +46,12 @@ const Project = ()=>{
     return(
             <div 
             draggable={false} 
-            className='hover:scale-[1.01] cursor-pointer duration-150 bg-white relative h-[50vh] mx-2 rounded-3xl p-6'
+            className='hover:scale-[1.01] cursor-pointer duration-150 bg-white relative h-[350px] mx-2 rounded-3xl p-6 overflow-hidden'
             >
-                <h2 className=' absolute bottom-6 left-6 text-xl'>Project name</h2>
+              <img 
+                draggable={false} 
+                src='https://raw.githubusercontent.com/tchi-sama/node-code/master/frontend/public/screenshot.png' className='absolute top-0 left-0 w-full h-full object-cover'></img>
+              <h2 className=' absolute bottom-6 left-6 text-xl'>Project name</h2>
             </div>
     )
 }
