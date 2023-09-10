@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     element: <Homein/>,
   },
   {
-    path: "/projects",
+    path: "/projects/:projectUrl",
     element: <Project/>,
   },
 ]);

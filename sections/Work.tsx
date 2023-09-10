@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import useStore from "../store/projects"
 import "react-multi-carousel/lib/styles.css";
-import { Link, useNavigate, useRoutes } from "react-router-dom";
+import { useNavigate  } from "react-router-dom";
 
 const responsive = {
   superLargeDesktop: {
@@ -24,6 +24,7 @@ interface Project {
   name: string;
   subtitle: string;
   readme: string;
+  urlName: string;
 }
 
 
@@ -62,7 +63,7 @@ const Project = ({ project }: { project: Project }) => {
         className="absolute top-0 left-0 scale-110 filter group-hover:brightness-50 group-hover:scale-100 duration-200 object-cover"
       ></img>
       <div 
-        onClick={()=>navigate("/projects")}
+        onClick={()=>navigate("/projects/"+project.urlName)}
         className="absolute flex gap-4 items-center group-hover:translate-x-0 translate-x-[-400px]  duration-200 bottom-6 cursor-pointer left-6 bg-white p-3 px-6 rounded-3xl shadow-xl">
           <div>
               <h2 className="    text-gray-800  text-3xl  drop-shadow-lg ">
