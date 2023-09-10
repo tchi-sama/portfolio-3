@@ -47,7 +47,7 @@ const Project = ({ project }: { project: Project }) => {
   return (
     <div
       draggable={false}
-      className=" aspect-[5/4] group duration-150 bg-white relative mx-4 rounded-3xl p-6 overflow-hidden"
+      className=" aspect-[5/4] group duration-150 bg-white relative mx-2 mx:mx-4 rounded-3xl p-6 overflow-hidden"
     >
       <img
         draggable={false}
@@ -58,10 +58,10 @@ const Project = ({ project }: { project: Project }) => {
         onClick={()=>navigate("/projects/"+project.urlName)}
         className="absolute flex gap-4 items-center group-hover:translate-x-0 translate-x-[-400px]  duration-200 bottom-6 cursor-pointer left-6 bg-white p-3 px-6 rounded-3xl shadow-xl">
           <div>
-              <h2 className="    text-gray-800 text-xl md:text-3xl  drop-shadow-lg ">
+              <h2 className="    text-gray-800 text-md md:text-3xl  drop-shadow-lg ">
                 {project.name}
               </h2>
-              <p className="text-gray-600 text-sm md:text-md">{project.subtitle}</p>
+              <p className="text-gray-600 text-xs md:text-md">{project.subtitle}</p>
           </div>
       </div>
     </div>

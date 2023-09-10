@@ -44,21 +44,22 @@ export default function About() {
                 <div className="grid md:grid-cols-4 gap-3 grid-cols-2">
                   <div>
                     <h3 className="text-xl md:text-3xl mb-2 md:mb-8">Frontend</h3>
-                    <ul className="text-sm md:text-lg">
+                    <ul className="text-xs md:text-lg">
                       <li>HTML</li>
                       <li>CSS</li>
-                      <li>JavaScript</li>
-                      <li>React</li>
-                      <li>Vue.js</li>
-                      <li>Sass/SCSS</li>
                       <li>tailwindcss</li>
+                      <li>JavaScript</li>
+                      <li>Typescript</li>
+                      <li>Reactjs</li>
+                      <li>Nextjs</li>
+                      <li>Vue.js</li>
                     </ul>
                   </div>
 
 
                   <div>
                     <h3 className="text-xl md:text-3xl mb-2 md:mb-8">Backend</h3>
-                    <ul className="text-sm md:text-lg">
+                    <ul className="text-xs md:text-lg">
                       <li>Node.js</li>
                       <li>Python</li>
                       <li>PHP</li>
@@ -71,7 +72,7 @@ export default function About() {
 
                   <div>
                     <h3 className="text-xl md:text-3xl mb-2 md:mb-8">Design</h3>
-                    <ul className="text-sm md:text-lg">
+                    <ul className="text-xs md:text-lg">
                       <li>Figma</li>
                       <li>Photoshop</li>
                       <li>Illustrator</li>
@@ -83,7 +84,7 @@ export default function About() {
 
                   <div>
                     <h3 className="text-xl md:text-3xl mb-2 md:mb-8">Other</h3>
-                    <ul className="text-sm md:text-lg">
+                    <ul className="text-xs md:text-lg">
                       <li>Git / Github</li>
                       <li>Ai / openai apis</li>
                       <li>Blockchain</li>
