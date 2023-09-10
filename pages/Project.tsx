@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import { useParams } from 'react-router-dom';
 import useStore from '../store/projects';
 import { useEffect, useState } from 'react';
+import WorkSlider from '../components/WorkSlider';
 interface Project {
   image: string;
   name: string;
@@ -19,7 +20,7 @@ export default function Project() {
 
   useEffect(()=>{
     setProject(projects.find(p=>p.urlName==projectUrl))
-  },[])
+  },[projectUrl])
   useEffect(()=>{
 
     console.log(project)
@@ -34,6 +35,10 @@ export default function Project() {
           <div >
               <h1 className='text-4xl md:text-8xl pb-2 md:py-6'>{project?.name}</h1>
               <MarkdownPreview  className='text-gray-700  text-sm md:text-xl font-light readme' source={project?.readme}></MarkdownPreview>
+              <div className='mt-8'>
+                <h1 className='md:text-5xl text-3xl my-8'>checkout more</h1>
+                <WorkSlider/>
+              </div>
           </div>
       </div>
 

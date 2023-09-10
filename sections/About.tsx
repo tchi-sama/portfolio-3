@@ -6,7 +6,7 @@ export default function About() {
       id="about"
       className="flex h-screen container py-12 mx-auto drop-shadow-xl items-center opacity-80 flex-1 justify-center"
     >
-      <div className="flex flex-col gap-2 mr-4 md:mr-12 ">
+      <div className="flex-col gap-2 mr-4 md:mr-12 hidden md:flex">
         <button onClick={()=>setAors(0)} className="p-2 text-md md:text-xl">
           <div className="h-text">
             <span className={`${aors==1?"text-[#0008]":"text-black"}`}>About me</span>
@@ -18,10 +18,19 @@ export default function About() {
           </div>
         </button>
       </div>
-      <div className="flex flex-col flex-1 justify-center gap-8 ">
+      <div className="flex flex-col flex-1 justify-center gap-8 px-4 md:px-0">
+              <div className="flex gap-2 mr-4 md:mr-12 md:hidden ">
+                <button onClick={()=>setAors(0)} className="p-2 text-md md:text-xl">
+                    <span className={`${aors==1?"text-[#0008]":"text-black"}`}>About me</span>
+                </button>
+                <button onClick={()=>setAors(1)} className="p-2 text-md md:text-xl">
+                    <span className={`${aors==0?"text-[#0008]":"text-black"}`}>Skills</span>
+                </button>
+              </div>
         {
             aors == 0 ?
             <div className="px-3">
+
                 <h1 className="text-4xl md:text-8xl  mb-4 md:mb-8 font-bold">Salutations!</h1>
                 <p className=" md:text-3xl md:leading-snug leading-6 text-sm max-w-7xl">
                 I'm Abdessamad, also known as Tchisama. I'm a JavaScript Developer and
