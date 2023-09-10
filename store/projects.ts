@@ -91,8 +91,8 @@ Explore the [Node Code GitHub Repo](https://github.com/code-node-gui/node-code) 
   },
 ];
 
-const useStore = create((set) => ({
-  projects,
+const useStore = create(() => ({
+  projects:projects,
 }))
 
 export default useStore

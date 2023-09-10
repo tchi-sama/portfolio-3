@@ -1,6 +1,8 @@
 import Carousel from "react-multi-carousel";
 import useStore from "../store/projects"
 import "react-multi-carousel/lib/styles.css";
+import { Link, useNavigate, useRoutes } from "react-router-dom";
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -37,7 +39,6 @@ export default function Work() {
         responsive={responsive}
         infinite={true}
         keyBoardControl={true}
-        removeArrowOnDeviceType={[]}
         arrows
       >
         {projects.map((project, i) => (
@@ -49,21 +50,26 @@ export default function Work() {
 }
 
 const Project = ({ project }: { project: Project }) => {
+  const navigate = useNavigate()
   return (
     <div
       draggable={false}
-      className="hover:scale-[1.01]  aspect-[5/4] cursor-pointer duration-150 bg-white relative mx-2 rounded-3xl p-6 overflow-hidden"
+      className=" aspect-[5/4] group duration-150 bg-white relative mx-6 rounded-3xl p-6 overflow-hidden"
     >
       <img
         draggable={false}
         src={project.image}
-        className="absolute top-0 left-0  object-cover"
+        className="absolute top-0 left-0 scale-110 filter group-hover:brightness-50 group-hover:scale-100 duration-200 object-cover"
       ></img>
-      <div className="absolute bottom-6 left-6 bg-white p-3 px-6 rounded-3xl shadow-xl">
-        <h2 className="    text-gray-800  text-3xl  drop-shadow-lg ">
-          {project.name}
-        </h2>
-        <p className="text-gray-600">{project.subtitle}</p>
+      <div 
+        onClick={()=>navigate("/projects")}
+        className="absolute flex gap-4 items-center group-hover:translate-x-0 translate-x-[-400px]  duration-200 bottom-6 cursor-pointer left-6 bg-white p-3 px-6 rounded-3xl shadow-xl">
+          <div>
+              <h2 className="    text-gray-800  text-3xl  drop-shadow-lg ">
+                {project.name}
+              </h2>
+              <p className="text-gray-600">{project.subtitle}</p>
+          </div>
       </div>
     </div>
   );

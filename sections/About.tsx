@@ -79,7 +79,8 @@ export default function About() {
                       <li>Ai / openai apis</li>
                       <li>Blockchain</li>
                       <li>Drawing</li>
-                      <li>vfx</li>
+                      <li>GraphQl</li>
+                      <li>System design</li>
                     </ul>
                   </div>
 

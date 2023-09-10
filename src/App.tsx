@@ -4,10 +4,29 @@ import Navbar from "../components/Navbar"
 import About from "../sections/About"
 import {useRef,useState} from "react"
 import Links from "../components/Links"
+import React from "react"
 
 import Project from "../pages/Project"
+
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
     
-  function App() {
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Homein/>,
+  },
+  {
+    path: "/projects",
+    element: <Project/>,
+  },
+]);
+
+function Homein (){
     const divRef = useRef<HTMLDivElement>(null)
     const [scrollPosition, setScrollPosition] = useState({ top: 0, left: 0 });
     const [currentSection,setCurrentSection] = useState(0)
@@ -20,14 +39,7 @@ import Project from "../pages/Project"
       console.log(Math.round(scrollPosition.top/window.innerHeight))
       setCurrentSection(Math.round(scrollPosition.top/window.innerHeight))
     };
-    
-    return (
-        //{/* <div className="fixed -z-30 bg-red-200 w-screen left-0 top-0 h-screen "> */}
-          0?
-          <div>
-            <Project/>
-          </div>
-          :
+  return (
           <div onScroll={handleScroll} ref={divRef} className="app h-screen bg-custom overflow-y-scroll">
             <Navbar isAbsolute={true}/>
             <Links section={currentSection}/>
@@ -35,6 +47,17 @@ import Project from "../pages/Project"
             <About/>
             <Work/>
           </div>
+  )
+
+}
+
+
+  function App() {
+    
+    return (
+          <React.StrictMode>
+            <RouterProvider router={router} />
+          </React.StrictMode>
     )
   }
 
