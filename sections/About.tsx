@@ -29,7 +29,7 @@ export default function About() {
               </div>
         {
             aors == 0 ?
-            <div className="px-3">
+            <div className="md:px-3">
 
                 <h1 className="text-4xl md:text-8xl  mb-4 md:mb-8 font-bold">Salutations!</h1>
                 <p className=" md:text-3xl md:leading-snug leading-6 text-sm max-w-7xl">

@@ -52,7 +52,7 @@ const Project = ({ project }: { project: Project }) => {
       <img
         draggable={false}
         src={project.image}
-        className="absolute top-0 left-0 scale-110 filter group-hover:brightness-50 group-hover:scale-100 duration-200 object-cover"
+        className="absolute top-0 left-0 scale-105 rotate-2 group-hover:rotate-0 filter group-hover:brightness-50 group-hover:scale-100 duration-200 object-cover"
       ></img>
       <div 
         onClick={()=>navigate("/projects/"+project.urlName)}
