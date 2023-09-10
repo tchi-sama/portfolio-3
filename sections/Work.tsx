@@ -1,5 +1,8 @@
+import { getDocs} from 'firebase/firestore/lite';
+import { useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import {colRef} from "../firebase"
 const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -15,7 +18,19 @@ const responsive = {
       items: 1
     },
   };
+
+
 export default function Work() {
+
+  useEffect(()=>{
+     getDocs(colRef).then((snapshot)=>{
+      let projects:any=[];
+      snapshot.docs.forEach(doc=>{
+        projects.push({...doc.data(),id:doc.id})
+      })
+      console.log(projects)
+    }).catch(err=>console.log(err))
+  },[])
   return (
     <section id="work" className=" flex pt-8 flex-col justify-center overflow-hidden h-screen container  mx-auto drop-shadow-xl   opacity-80 flex-1 ">
         <h1 className="text-4xl md:text-8xl p-4 py-8  font-bold">My Work</h1>
@@ -46,7 +61,7 @@ const Project = ()=>{
     return(
             <div 
             draggable={false} 
-            className='hover:scale-[1.01] cursor-pointer duration-150 bg-white relative h-[350px] mx-2 rounded-3xl p-6 overflow-hidden'
+            className='hover:scale-[1.01] aspect-[4/3] cursor-pointer duration-150 bg-white relative mx-2 rounded-3xl p-6 overflow-hidden'
             >
               <img 
                 draggable={false} 

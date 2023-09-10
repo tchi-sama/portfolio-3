@@ -5,10 +5,8 @@
 @tailwind utilities;
 
 
-body{
-  font-family: 'Unbounded', sans-serif;
-}
 *{
+  font-family: 'Unbounded', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -54,7 +52,9 @@ body{
   text-orientation: mixed;
 }
 
-
+.readme img{
+   width: 100%;
+}
 
 .app {
   scroll-snap-type:y mandatory;

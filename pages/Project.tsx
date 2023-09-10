@@ -1,66 +1,69 @@
 import MarkdownPreview from '@uiw/react-markdown-preview';
+import Navbar from '../components/Navbar';
 const source = `
-# Node Code 
-![Frame 2 (3)](https://github.com/code-node-gui/node-code/assets/115560200/0db66c6b-0114-4401-878c-cafce6b96b84)
+# 30MinShop
 
-## Overview
+![Frame 4 (2)](https://github.com/tchisama/30minshop-old/assets/115560200/e0d466ce-5c03-4b36-b7ab-cc12b040df15)
 
-Node Code is a versatile workspace that empowers users to write code using graphical nodes, connecting them to craft intricate logic effortlessly. This project is built using JavaScript, React, MongoDB, and Node.js, making it a powerful platform for developers seeking an intuitive and visual approach to coding.
+<br/>
 
-## GitHub Repository
+Node 30MinShop is an innovative platform designed to cater to all the needs of a store, from its inception to order management and product additions. This project is built using TypeScript, Next.js, Firebase, and Daisy UI, providing a streamlined experience for users to create and deploy their online stores in just minutes.
 
-- GitHub Repository: [Node Code GitHub Repo](https://github.com/code-node-gui/node-code)
+## Key Features
 
-## Features
+### Store Creation Made Easy
 
-### User Profiles
+Node 30MinShop simplifies the process of creating an online store. Users can drag and drop sections to customize their store or take advantage of AI-powered tools to generate an entire webpage. This feature ensures that setting up a store is not just efficient but also highly user-friendly.
 
-Node Code allows users to create and manage their profiles, providing a personalized experience within the platform. User profiles store valuable information and preferences, making it easy to keep track of your projects and contributions.
+### Rapid Deployment
 
-### Project Management
+With Node 30MinShop, users can create and deploy their stores within minutes. The platform's agility means that users can get their online shops up and running quickly, saving valuable time and effort.
 
-With Node Code, users can effortlessly save and manage multiple projects, ensuring that all your work is organized and accessible in one place. This feature streamlines your development workflow and enhances productivity.
+### Order Management
 
-### Project Search
+Managing orders is a breeze with Node 30MinShop. The platform provides robust tools for tracking and processing customer orders, ensuring a seamless experience for both store owners and shoppers.
 
-Searching for specific projects within Node Code is a breeze. Whether you're looking for your own creations or exploring others' work, the project search feature ensures that you can quickly find what you need.
+### Product Management
 
-### Custom Nodes Marketplace
-
-Node Code introduces an innovative Custom Nodes Marketplace, where users can discover and share custom nodes created by the community. This feature expands the platform's capabilities by incorporating a wide range of user-contributed nodes, enhancing its overall functionality and versatility.
+Node 30MinShop simplifies product addition and management. Users can effortlessly add, edit, and remove products from their online store, maintaining complete control over their inventory.
 
 ## Technologies Used
 
-- **JavaScript**: The core language used for building the Node Code application.
-- **React**: A popular JavaScript library for building user interfaces, providing a responsive and dynamic front-end experience.
-- **MongoDB**: A NoSQL database used to store user profiles, projects, and other data.
-- **Node.js**: A runtime environment that allows server-side execution of JavaScript, ensuring smooth server operations.
+- **TypeScript**: A statically-typed superset of JavaScript that enhances code quality and maintainability.
+- **Next.js**: A popular React framework that offers server-side rendering, routing, and a rich developer experience.
+- **Firebase**: A cloud-based platform that provides essential backend services, including authentication and real-time database functionality.
+- **Daisy UI**: A collection of responsive UI components for Tailwind CSS, helping to create beautiful and user-friendly interfaces.
 
 ## Future Enhancements
 
-The Node Code project is continuously evolving, with plans to implement several exciting features in the future:
+The Node 30MinShop project is an ongoing endeavor, with plans to introduce several exciting enhancements in the future:
 
-- Enhanced Custom Nodes Marketplace: Expanding the marketplace with more user-generated nodes and improved search functionality.
-- Collaboration Features: Enabling collaboration between users on shared projects and nodes.
-- Code Export: Allowing users to export their projects into various programming languages.
+- **Payment Integration**: Integrating payment gateways for seamless online transactions.
+- **Customization Options**: Expanding customization capabilities to offer more choices for store design.
+- **Analytics and Insights**: Providing store owners with valuable data and insights on customer behavior and sales trends.
 
 Stay tuned for these exciting updates!
 
 ## Conclusion
 
-Node Code is a groundbreaking platform that combines the power of JavaScript, React, MongoDB, and Node.js to provide users with an innovative and intuitive way to code. With user profiles, project management, project search, and the Custom Nodes Marketplace, it offers a comprehensive solution for developers looking to streamline their coding experience.
+Node 30MinShop is a groundbreaking platform that empowers users to create and deploy online stores rapidly. With features like easy store creation, quick deployment, order and product management, it streamlines the e-commerce experience. Built with TypeScript, Next.js, Firebase, and Daisy UI, it offers a robust and user-friendly solution for store owners.
 
-Explore the [Node Code GitHub Repo](https://github.com/code-node-gui/node-code) to learn more and get involved in this exciting project!
+Explore this project to discover how Node 30MinShop can revolutionize the world of online retail and make store management more accessible than ever before.
 
 `;
 export default function Project() {
   return (
-    <div className='px-4'>
-    <div className="container mx-auto">
-        <div >
-            <MarkdownPreview  className='md:text-[1.3em] my-24 ' source={source}></MarkdownPreview>
-        </div>
-    </div>
+    <div className='px-4 '>
+
+      <div className='opacity-90 2xl:block hidden'><Navbar isAbsolute={true}/></div>
+      <div className='opacity-90 2xl:hidden block'><Navbar isAbsolute={false}/></div>
+
+      <div className="max-w-5xl mx-auto md:my-24 my-20 text-gray-700">
+          <div >
+              <MarkdownPreview  className='text-gray-700  text-sm md:text-xl font-light readme' source={source}></MarkdownPreview>
+          </div>
+      </div>
+
     </div>
   )
 }

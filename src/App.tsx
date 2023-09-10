@@ -23,13 +23,13 @@ import Project from "../pages/Project"
     
     return (
         //{/* <div className="fixed -z-30 bg-red-200 w-screen left-0 top-0 h-screen "> */}
-          1?
+          0?
           <div>
             <Project/>
           </div>
           :
           <div onScroll={handleScroll} ref={divRef} className="app h-screen bg-custom overflow-y-scroll">
-            <Navbar/>
+            <Navbar isAbsolute={true}/>
             <Links section={currentSection}/>
             <Home/>
             <About/>
